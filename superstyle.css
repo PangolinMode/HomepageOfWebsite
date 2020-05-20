@@ -1,5 +1,8 @@
 @charset "UTF-8";
 /* CSS Document */
+/*body {
+	background-color: #fffee3;
+} */
 #nav {
 	
 }
@@ -23,4 +26,5 @@ a {
 img {
 	max-width:32%;
 	height:auto;
+	margin-bottom: 5px;
 }
