@@ -9,7 +9,6 @@
 }
 
 #logo {
-	float:left;
 	margin-right:4px;
 }
 #logo:hover{
@@ -26,6 +25,6 @@ a {
 	color:teal;
 }
 img {
-	width:667px;
-	height:667px;
+	max-width:200px;
+	height:auto;
 }
