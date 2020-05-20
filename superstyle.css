@@ -25,6 +25,6 @@ a {
 	color:teal;
 }
 img {
-	width:200px;
-	height:200px;
+	max-width:32%;
+	height:auto;
 }
