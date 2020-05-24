@@ -31,17 +31,19 @@
 	<div class="row align-items-center"> <!--class="col-sm-8 col-sm-offset-2" -->
 		<div class="col-sm-10 offset-sm-1 align-self-center">
 			<img id="logo" src="img/C.png" alt="Pool Logo" onmouseover="this.src= 'img/CC.png' " onmouseout="this.src= 'img/C.png'" title="Welcome to Carl's personal website."/>
-			<a href="http://instagram.com/cayennecarl?ref=badge"><img src="img/IG_Glyph_Fill_Pink.png" title="Enter the world of Cayenne Carl" /></a>
-			<a href="http://www.linkedin.com/pub/carl-van-reis/28/921/9a1"> <img src="img/LI-In-Bug_540x540_NoTransparency.png" title="Learn more about Carl's work experience, and then, you can connect with him, golly gee!"/></a>
+			<a href="http://instagram.com/cayennecarl?ref=badge"><img id="Insta" src="img/IG_Glyph_Fill_Pink.png" onmouseout="this.src= 'img/IG_Glyph_Fill_Pink.png'" title="Enter the world of Cayenne Carl" /></a>
+			<a href="http://www.linkedin.com/pub/carl-van-reis/28/921/9a1">
+				<img id="faces" src="img/LI-In-Bug_540x540_NoTransparency.png" onmouseout="this.src= 'img/LI-In-Bug_540x540_NoTransparency.png' " title="Learn more about Carl's work experience, and then, you can connect with him, golly gee!"/>
+			</a>
 		</div>
 	</div>
 
 
 	<div class="row align-items-center"> <!--class="col-sm-8 col-sm-offset-2" -->
 		<div class="col-sm-10 offset-sm-1 align-self-center">
-			<img src="img/물음표.png" onmouseover="this.src= 'img/Corrupted.png' " onmouseout="this.src= 'img/물음표.png'" title="?"/>
 			<a href="https://open.spotify.com/playlist/51r0eRUuyEinaQtGxeeLrp?si=LVzw-PGBS8y5VGBmem_JLw"><img src="img/물음표.png" onmouseover="this.src= 'img/표음물음표.png' " onmouseout="this.src= 'img/물음표.png'" title="?"/>
 				</a>
+			<img src="img/물음표.png" onmouseover="this.src= 'img/書道.png' " onmouseout="this.src= 'img/물음표.png'" title="?"/>
 			<img src="img/물음표.png" onmouseover="this.src= 'img/Corrupted.png' " onmouseout="this.src= 'img/물음표.png'" title="?"/>
 		</div>
 	</div>
@@ -59,10 +61,43 @@
 
 </div>
 
-
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+<script>
+window.onload=function(){
+var portraits = ['img/Looking/Down.png','img/Looking/Forward.png','img/Looking/Heroic.png','img/Looking/WeirdedOut.png','img/Looking/WithHandsUp.png'];
+
+document.getElementById("faces").addEventListener("mouseover", function(event) {
+    var random = portraits[Math.floor(Math.random() * portraits.length)];
+    event.target.setAttribute("src", random);
+});
+}
+
+var prev_handler = window.onload;
+window.onload = function () {
+	if (prev_handler) {
+		prev_handler();
+	}
+	var food = ['img/Cayenne/Eggplant.jpg', 'img/Cayenne/Pistach.png', 'img/Cayenne/RGB_1.png', 'img/Cayenne/GrahamCrackers.png', 'img/Cayenne/GreenYellowFinal.png', 'img/Cayenne/Love.png', 'img/Cayenne/ToxicRug3.png', 'img/Cayenne/Wave1.png', 'img/Cayenne/WingsAndSuch.png'];
+
+document.getElementById("Insta").addEventListener("mouseover", function(event) {
+    var otherrandom = food[Math.floor(Math.random() * food.length)];
+    event.target.setAttribute("src", otherrandom);
+});
+}
+</script>
+
+<!-- <script type="text/javascript">
+window.onload = choosePic;
+
+var myPix = ['img/Looking/Down.png','img/Looking/Forward.png','img/Looking/Heroic.png','img/Looking/WeirdedOut.png','img/Looking/WithHandsUp.png']
+
+function choosePic() {
+     var randomNum = Math.floor(Math.random() * myPix.length);
+     document.getElementById('It-Me').innerHTML = myPix[randomNum];
+</script> -->
 
 </body>
 
