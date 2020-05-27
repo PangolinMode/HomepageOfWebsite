@@ -66,6 +66,14 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
 <script>
+function preloadImage(url)
+{
+    var img=new Image();
+    img.src=url;
+}
+</script>
+
+<script>
 window.onload=function(){
 var portraits = ['img/Looking/Down.png','img/Looking/Forward.png','img/Looking/Heroic.png','img/Looking/WeirdedOut.png','img/Looking/WithHandsUp.png'];
 
@@ -87,17 +95,8 @@ document.getElementById("Insta").addEventListener("mouseover", function(event) {
     event.target.setAttribute("src", otherrandom);
 });
 }
+
 </script>
-
-<!-- <script type="text/javascript">
-window.onload = choosePic;
-
-var myPix = ['img/Looking/Down.png','img/Looking/Forward.png','img/Looking/Heroic.png','img/Looking/WeirdedOut.png','img/Looking/WithHandsUp.png']
-
-function choosePic() {
-     var randomNum = Math.floor(Math.random() * myPix.length);
-     document.getElementById('It-Me').innerHTML = myPix[randomNum];
-</script> -->
 
 </body>
 
